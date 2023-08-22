@@ -2,8 +2,11 @@
 #include "main.h"
 
 /**
- * rot13 - encodes a string using rot13
+ * print_rot13 - encodes a string using rot13
  * @s: input string.
+ * @buffer: local buffer on printf
+ * @j: index for buffer
+ * @count: number of charcters printed
  * Return: the pointer to dest.
  */
 

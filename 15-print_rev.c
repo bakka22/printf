@@ -2,8 +2,12 @@
 #include "main.h"
 
 /**
- * rev_string - Reverses a string.
+ * print_rev - Reverses a string.
  * @s: The string to be reversed.
+ * @buffer: local buffer on printf
+ * @j: index of buffer
+ * @count: number of charcters printed
+ *Return: nothing
  */
 void print_rev(char *s, char *buffer, int *j, int *count)
 {
