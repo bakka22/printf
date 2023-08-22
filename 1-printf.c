@@ -29,7 +29,8 @@ int _printf(const char *format, ...)
 			i += 2;
 			count++;
 			j++;
-			reset(buffer, &j);
+			if (j == 1022)
+				reset(buffer, &j);
 		}
 		else if	(format[i] == '%')
 		{
@@ -40,7 +41,8 @@ int _printf(const char *format, ...)
 		buffer[j] = format[i];
 		count++;
 		j++;
-		reset(buffer, &j);
+		if (j == 1022)
+			reset(buffer, &j);
 	}
 	write(1, buffer, _strlen(buffer));
 	free(buffer);

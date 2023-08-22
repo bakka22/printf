@@ -11,7 +11,6 @@ void reset(char *buffer, int *j)
 {
 	int i;
 
-	if (*j != 0)
 	{
 		write(1, buffer, 1024);
 		for (i = 0; i < 1024; i++)

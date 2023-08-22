@@ -22,9 +22,8 @@ void _puts(char *str, char *buffer, int *j, int *count)
 			(*count)++;
 			if (*j == 1023)
 				reset(buffer, j);
+			return;
 		}
-		reset(buffer, j);
-		return;
 	}
 	p = str;
 	while (1)
@@ -39,5 +38,4 @@ void _puts(char *str, char *buffer, int *j, int *count)
 		if (*j == 1023)
 			reset(buffer, j);
 	}
-	reset(buffer, j);
 }

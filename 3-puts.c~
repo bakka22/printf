@@ -37,7 +37,7 @@ void _puts(char *str, char *buffer, int *j, int *count)
 		(*j)++;
 		(*count)++;
 		if (*j == 1023)
-			reset(buffer);
+			reset(buffer, j);
 	}
 	reset(buffer, j);
 }
