@@ -19,9 +19,9 @@ int _printf(const char *format, ...)
 	buffer = malloc(sizeof(char) * 1024);
 	if (buffer == NULL)
 		return (0);
-	if (!format || fortmat[0] == '%' && !format[1])
+	if (!format || (format[0] == '%' && !format[1]))
 		return (-1);
-	if (format[0] == '%' && format[1] = ' ' && !format[2])
+	if (format[0] == '%' && format[1] == ' ' && !format[2])
 		return (-1);
 	j = 0;
 	va_start(args, format);
@@ -33,8 +33,7 @@ int _printf(const char *format, ...)
 			i += 2;
 			count++;
 			j++;
-			if (j == 1022)
-				reset(buffer, &j);
+			reset(buffer, &j);
 		}
 		else if	(format[i] == '%')
 		{
@@ -45,8 +44,7 @@ int _printf(const char *format, ...)
 		buffer[j] = format[i];
 		count++;
 		j++;
-		if (j == 1022)
-			reset(buffer, &j);
+		reset(buffer, &j);
 	}
 	write(1, buffer, _strlen(buffer));
 	free(buffer);
