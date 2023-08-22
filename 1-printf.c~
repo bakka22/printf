@@ -17,7 +17,7 @@ int _printf(const char *format, ...)
 
 	count = 0;
 	buffer = malloc(sizeof(char) * 1024);
-	if (buffer = NULL)
+	if (buffer == NULL)
 		return (0);
 
 	j = 0;

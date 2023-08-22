@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stddef.h>
 /**
 * _puts - print a string to stdout
 *@str : pointer to string to be printed
@@ -18,7 +18,7 @@ void _puts(char *str, char *buffer, int *j, int *count)
 	{
 		for (i = 0; i < 6; i++)
 		{
-			buffer[(*j)++] = null[i];
+			buffer[*j++] = null[i];
 			(*count)++;
 			if (*j == 1022)
 				reset(buffer, j);
