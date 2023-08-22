@@ -33,8 +33,9 @@ int _printf(const char *format, ...)
 			i += 2;
 			count++;
 			j++;
-			if (j == 1022)
+			if (j == 1023)
 				reset(buffer, &j);
+			reset(buffer, &j);
 		}
 		else if	(format[i] == '%')
 		{
@@ -45,8 +46,9 @@ int _printf(const char *format, ...)
 		buffer[j] = format[i];
 		count++;
 		j++;
-		if (j == 1022)
+		if (j == 1023)
 			reset(buffer, &j);
+		reset(buffer, &j);
 	}
 	write(1, buffer, _strlen(buffer));
 	free(buffer);
