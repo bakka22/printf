@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 			count++;
 			j++;
 			if (j == 1022)
-				*reset(buffer, &j);
+				reset(buffer, &j);
 		}
 		else if	(format[i] == '%')
 		{

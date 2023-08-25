@@ -18,7 +18,8 @@ void _puts(char *str, char *buffer, int *j, int *count)
 	{
 		for (i = 0; i < 6; i++)
 		{
-			buffer[*j++] = null[i];
+			buffer[*j] = null[i];
+			(*j)++;
 			(*count)++;
 			if (*j == 1023)
 				reset(buffer, j);
