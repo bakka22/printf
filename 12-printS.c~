@@ -25,10 +25,12 @@ void printS(char *str, char *buffer, int *j, int *count)
 			(*j)++;
 			if (*j == 1022)
 				reset(buffer, j);
+
 			buffer[*j] = 'x';
 			(*j)++;
 			if (*j == 1022)
 				reset(buffer, j);
+
 			(*count) += 2;
 			if (*p <= 15)
 			{
@@ -36,6 +38,7 @@ void printS(char *str, char *buffer, int *j, int *count)
 				(*j)++;
 				if (*j == 1022)
 					reset(buffer, j);
+
 				(*count)++;
 			}
 			print_cap_hexa(*p, buffer, j, count);

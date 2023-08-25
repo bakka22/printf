@@ -22,8 +22,8 @@ void _puts(char *str, char *buffer, int *j, int *count)
 			(*count)++;
 			if (*j == 1023)
 				reset(buffer, j);
-			return;
 		}
+		return;
 	}
 	p = str;
 	while (1)
