@@ -42,15 +42,8 @@ int _printf(const char *format, ...)
 				break;
 		}
 		_putchar(format[i]);
-		/*
-		*buffer[j] = format[i];
-		*count++;
-		*j++;
-		*if (j == 1022)
-			*reset(buffer, &j);
-		*/
 	}
-	/*write(1, buffer, _strlen(buffer));*/
+	write(1, buffer, _strlen(buffer));
 	free(buffer);
 	va_end(args);
 	return (count);

@@ -14,11 +14,14 @@ void _puts(char *str, char *buffer, int *j, int *count)
 	int i;
 	char null[7] = "(null)";
 
+	(void)j;
+	(void)buffer;
+	(void)count;
 	if (str == NULL)
 	{
 		for (i = 0; i < 6; i++)
 		{
-			_putchar(null[i];
+			_putchar(null[i]);
 			/*
 			*buffer[*j] = null[i];
 			*(*j)++;
