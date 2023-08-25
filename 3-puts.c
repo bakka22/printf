@@ -21,14 +21,11 @@ void _puts(char *str, char *buffer, int *j, int *count)
 	{
 		for (i = 0; i < 6; i++)
 		{
-			_putchar(null[i]);
-			/*
-			*buffer[*j] = null[i];
-			*(*j)++;
-			*(*count)++;
-			*if (*j == 1023)
-				*reset(buffer, j);
-			*/
+			buffer[*j] = null[i];
+			(*j)++;
+			(*count)++;
+			if (*j == 1023)
+				reset(buffer, j);
 		}
 		return;
 	}
@@ -38,15 +35,11 @@ void _puts(char *str, char *buffer, int *j, int *count)
 		if (*p == '\0')
 			break;
 
-		_putchar(*p);
+		buffer[*j] = *p;
 		p += 1;
-		/*
-		*buffer[*j] = *p;
-		*p += 1;
-		*(*j)++;
-		*(*count)++;
-		*if (*j == 1023)
-			*reset(buffer, j);
-		*/
+		(*j)++;
+		(*count)++;
+		if (*j == 1023)
+			reset(buffer, j);
 	}
 }

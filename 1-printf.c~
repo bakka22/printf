@@ -25,7 +25,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%' && format[i + 1] == 'c')
 		{
-			_putchar(va_arg(args, int);
+			_putchar(va_arg(args, int));
 			/*
 			*buffer[j] = va_arg(args, int);
 			*i += 2;
