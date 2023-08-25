@@ -17,15 +17,12 @@ void director2(va_list args, char *buffer, int *j, int *count, char c, int *i)
 		switch (c)
 		{
 			case '%':
-				_putchar('%');
-				/*
-				*buffer[*j] = '%';
-				*(*j)++;
-				*(*count)++;
-				*(*i) += 2;
-				*if (*j == 1023)
-					*reset(buffer, j);
-				*/
+				buffer[*j] = '%';
+				(*j)++;
+				(*count)++;
+				(*i) += 2;
+				if (*j == 1023)
+					reset(buffer, j);
 				break;
 			case 'd':
 				print_number(va_arg(args, int), buffer, j, count);

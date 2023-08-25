@@ -25,12 +25,15 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%' && format[i + 1] == 'c')
 		{
-			buffer[j] = va_arg(args, int);
-			i += 2;
-			count++;
-			j++;
-			if (j == 1022)
-				reset(buffer, &j);
+			_putchar(va_arg(args, int);
+			/*
+			*buffer[j] = va_arg(args, int);
+			*i += 2;
+			*count++;
+			*j++;
+			*if (j == 1022)
+				*reset(buffer, &j);
+			*/
 		}
 		else if	(format[i] == '%')
 		{
@@ -38,11 +41,7 @@ int _printf(const char *format, ...)
 			if (format[i] == '\0')
 				break;
 		}
-		buffer[j] = format[i];
-		count++;
-		j++;
-		if (j == 1022)
-			reset(buffer, &j);
+		_putchar(format[i]);
 	}
 	write(1, buffer, _strlen(buffer));
 	free(buffer);
